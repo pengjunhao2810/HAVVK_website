@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>HAWK 哈夫克集团 · 员工门户系统</title>
+<link rel="icon" href="img/logo2.png">
+<link rel="stylesheet" type="text/css" href="css/hr.css?v=20"/>
+</head>
+<body>
+
+<!-- ===================== 登录页 ===================== -->
+<div class="login-wrap" id="loginWrap">
+  <div class="login-box">
+    <div class="login-logo"></div>
+    <p class="login-txt"><i></i><span>哈夫克集团 · 员工门户系统</span><i></i></p>
+    <div class="form-group">
+      <label>账号 / 工号</label>
+      <input type="text" id="loginUsername" placeholder="请输入员工姓名或工号" autocomplete="off"/>
+    </div>
+    <div class="form-group">
+      <label>密码</label>
+      <input type="password" id="loginPassword" placeholder="请输入登录密码" autocomplete="off"/>
+    </div>
+    <div class="login-error" id="loginError"></div>
+    <a href="javascript:;" class="login-btn" id="loginBtn"><span>登 录</span><em>LOGIN</em></a>
+  </div>
+</div>
+
+<!-- ===================== 应用布局 ===================== -->
+<div class="app-layout" id="appLayout">
+  <div class="sidebar-mask" id="sidebarMask"></div>
+  <aside class="app-sidebar" id="appSidebar">
+    <div class="side-brand">
+      <div class="brand-emblem"></div>
+      <div>
+        <div class="brand-text">HAVVK GROUP</div>
+        <div class="brand-sub">哈夫克集团 · 员工门户</div>
+      </div>
+    </div>
+    <nav class="side-nav" id="sideNav"></nav>
+    <div class="side-footer">
+      <div class="text-dim" id="sideUserInfo"></div>
+      <a href="javascript:;" class="topbar-link side-portal" id="topbarPortal">返回主站</a>
+    </div>
+  </aside>
+
+  <div class="app-main">
+    <div class="app-topbar">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <span class="menu-toggle" id="menuToggle">☰</span>
+        <div class="page-title" id="pageTitle">工作台<small id="pageSubtitle"></small></div>
+      </div>
+      <div class="topbar-user">
+        <a href="javascript:;" class="btn btn-danger logout-btn top-logout" id="sideLogout">退出登录</a>
+        <div class="user-chip">
+          <div class="avatar" id="topAvatar">H</div>
+          <div>
+            <div class="u-name" id="topName"></div>
+            <div class="u-role" id="topRole"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="app-content" id="appContent"></div>
+  </div>
+</div>
+
+<!-- ===================== 模态框 ===================== -->
+<div class="modal-mask" id="modalMask">
+  <div class="modal">
+    <div class="modal-head">
+      <h3 id="modalTitle">标题</h3>
+      <span class="modal-close" id="modalClose">✕</span>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+    <div class="modal-foot" id="modalFoot"></div>
+  </div>
+</div>
+
+<!-- ===================== Toast ===================== -->
+<div class="toast" id="toast"></div>
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/hr-files.js?v=7"></script>
+<script src="js/hr-data.js?v=25"></script>
+<script src="js/hr-app.js?v=43"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

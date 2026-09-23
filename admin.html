@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,viewport-fit=cover"/>
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="robots" content="all">
+<meta name="author" content="Tencent-CP" />
+<meta name="Copyright" content="Tencent" />
+<meta name="Description" data-i18n = '[content]title' content="信息予你无限">
+<meta name="Keywords" data-i18n = '[content]title' content="信息予你无限">
+<meta property="og:image" content="img/logo2.png" />
+<link rel="icon" href="img/logo2.png">
+<title data-i18n = 'title'></title>
+<link rel="stylesheet" type="text/css" href="css/index.css?v=38"/> 
+
+<script>
+  !function () {
+    function params(u, p) {
+      var m = new RegExp('(?:&|/?)' + p + '=([^&$]+)').exec(u);
+      return m ? m[1] : '';
+    }
+     if(/iphone|android|ipod|(?=.*arkweb)(?=.*micromessenger)/i.test(navigator.userAgent) == true && params(location.search, "from") != "mobile"){
+      const href = location.href;
+         location.href = href.replace("/havvkrelink/","/havvkrelink/m/");
+    }
+  }();
+</script>
+</head>
+<body data-i18n = '[class]lang'>
+	
+<img src="img/logo2.png" class="hide" alt="" />
+<div class="yy_box yy_box1">
+  <a href="javascript:;" class="btn_yy sp"><span>zh</span><i></i></a>
+  <p class="yy_ct sp">
+    <a href="javascript:;" id="zh" class=""><span>中文</span> <i></i></a>
+    <a href="javascript:;" id="en" class=""><span>english</span><i></i></a>
+  </p>
+</div>
+    <!-- 登录页 -->
+<div class="admin-overlay" id="adminOverlay">
+	<div class="login-box">
+		<div class="login-logo"></div>
+		<p class="login-txt"><i></i><span data-i18n = "dltxt1"></span><i></i></p>
+		<div class="form-group">
+			<label data-i18n = "username"></label>
+			<input type="text" id="username" data-i18n = '[placeholder]dltxt2' placeholder=""  maxlength="20" autocomplete="off" autocomplete="username">
+		</div>
+		<div class="form-group">
+			<label data-i18n = "password"></label>
+			<input type="password" id="password" data-i18n = '[placeholder]dltxt3' placeholder=""  maxlength="20" autocomplete="off" autocomplete="username">
+		</div>
+		<a href="javascript:;" class="login-btn" data-i18n='dlbtn' id="login"></a>
+		<div class="login-error">⚠ <span class="admin-login-err"></span></div>
+	</div>
+</div>
+
+<!-- 门户首页（登录后默认） -->
+<div class="portal-page" id="portalPage" style="display:none;">
+	<div class="portal-header">
+		<div class="portal-brand">
+			<img src="img/logo2.png" class="portal-logo" alt="" />
+			<div class="portal-tit">
+				<h1 id="portalName"></h1>
+				<p id="portalNameEn"></p>
+			</div>
+		</div>
+		<div class="portal-user">
+			<a href="javascript:;" class="portal-logout" data-i18n = "logout"></a>
+		</div>
+	</div>
+	<div class="portal-nav" id="portalNav"></div>
+	<div class="portal-body" id="portalBody"></div>
+</div>
+
+<!-- 目录页 -->
+ <div class="folder-box" id="folderOverlay" style="display: block;">
+	<!-- 文件夹内容 -->
+	<div class="folder-content" style="display: none;" id="folder-content">
+		<div class="folder-title">
+			<a href="javascript:;" class="folder-back" id="folderBack">← 档案中心</a>
+			<h2 class="folder-tit" id="nav-title"></h2>
+			<a href="javascript:;" class="folder-logout" data-i18n = "logout"></a>
+		</div>
+		<div class="folder-ct" id="folder-ct">
+
+		</div>
+	</div>
+
+	<!-- 文档列表页 -->
+	<div class="doc-content" style="display: none;" id="doc-list">
+		<div class="doc-title">
+			<h2 class="doc-tit">
+				<span id="doc-list-title"></span>
+			</h2>
+			<a href="javascript:;" class="doc-back" id="doc-list-back" data-i18n = "back">返回</a>
+		</div>
+		<div class="doc-ct" id="doc-list-content">
+			
+		</div>
+	</div>
+
+	<!-- 进入文档 -->
+	<div class="doc-content" style="display: none;" id="doc-detail">
+		<div class="doc-title">
+			<h2 class="doc-tit">
+				<span id="doc-detail-title"></span>
+			</h2>
+			<a href="javascript:;" class="doc-back" id="doc-detail-back" data-i18n = "back">返回</a>
+
+
+		</div>
+		<div class="doc-text" style="display: block;" id="doc-detail-content">
+			
+		</div>
+	</div>
+ </div>
+
+ <!-- 图片点击放大 -->
+<div class="doc-picbox" id="doc-picbox">
+	<div class="doc-picct">
+		<a href="javascript:;" class="doc-close"></a>
+		<a href="javascript:;" class="btn-down"></a>
+		<p class="pic-name">
+			<i></i>
+			<span></span>
+		</p>
+		<img alt="" />
+	</div>
+</div>
+
+<!-- 密码弹窗 -->
+<div class="password-overlay" id="passwordOverlay">
+	<div class="password-box">
+		<p class="password-suo"></p>
+		<p class="password-tit">ACCESS RESTRICTED</p>
+		<p class="password-desc" id="pass-title"></p>
+		<p class="login-txt"><i></i><span data-i18n='dltxt4'></span><i></i></p>
+		<div class="form-group">
+			<input type="password" id="password1" data-i18n='[placeholder]dltxt5' placeholder="" maxlength="20" autocomplete="off" autocomplete="new-password">
+		</div>
+		<div class="password-btn">
+			<a href="javascript:;" class="password-btn-lock" data-i18n = "unlock"></a>
+			<a href="javascript:;" class="password-btn-cancel" data-i18n="cancel"></a>
+		</div>
+		<div class="login-error">⚠ <span class="pwd-err"></span></div>
+	</div>
+</div>
+
+<!-- 未解锁弹窗 -->
+<div class="unlocked-overlay" id="unlockedOverlay">
+	<a href="javascript:;" class="unlocked-close"></a>
+	<div class="unlocked-box">
+		<p class="unlocked-suo"></p>
+		<p class="unlocked-tit"></p>
+		<p class="unlocked-desc"></p>
+	</div>
+</div>
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/i18next.js"></script>
+<script src="js/offline-data.js?v=26"></script>
+<script src="js/admin3.js?v=42"></script>
+<script src="js/langan.js"></script>
+<script src="js/lang-resources.js"></script>
+</body>
+</html>

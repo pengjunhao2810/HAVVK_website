@@ -1,0 +1,427 @@
+/* ==========================================================================
+   哈夫克集团 · 主题覆盖层 (havvk-theme)
+   严格对照原站 https://df.qq.com/cp/havvkrelink/ 风格：
+   浅蓝白底色 #ecf3fa + 云海背景 + 白色圆角卡片 + 蓝色系点缀
+   字体：方正兰亭黑 (fzlth/fzltzh/fzltth) · 强调蓝 #2362af / #038aff / #5894de / #85b1e7
+   ========================================================================== */
+
+/* ---------- 字体（与原站一致） ---------- */
+@font-face { font-family: 'fzlth'; src: url('havvk/font_fzlth.woff') format('truetype'); }
+@font-face { font-family: 'fzltzh'; src: url('havvk/font_fzltzh.woff') format('truetype'); }
+@font-face { font-family: 'fzltth'; src: url('havvk/font_fzltth.woff') format('truetype'); }
+
+/* ---------- 全局 ---------- */
+html, body {
+    background-color: #ecf3fa !important;
+    background-image: url('havvk/rp0.jpg') !important;
+    background-repeat: no-repeat !important;
+    background-position: 50% 0 !important;
+    background-size: 100% auto !important;
+    background-attachment: fixed !important;
+    color: #494949 !important;
+    font-family: 'fzlth', 'Microsoft YaHei', Arial, sans-serif !important;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* ---------- 顶栏（原站深蓝标题栏） ---------- */
+.header, .header-content {
+    background: linear-gradient(135deg, #1d4e8f 0%, #2362af 45%, #3c7fd2 100%) !important;
+    border-bottom: 0.02rem solid rgba(60,127,210,0.6) !important;
+    box-shadow: 0 0 0.3rem rgba(175,193,214,0.5) !important;
+    color: #ffffff !important;
+}
+
+.header .logo h1, .header-content .logo h1 {
+    color: #ffffff !important;
+    font-family: 'fzltzh' !important;
+    letter-spacing: 0.02rem;
+    text-shadow: 0 0.02rem 0.06rem rgba(0,0,0,0.2);
+}
+
+.header .logo span {
+    background: #ffffff !important;
+    color: #2362af !important;
+    font-family: 'fzlth' !important;
+}
+
+.logo-icon {
+    background: linear-gradient(135deg, #2362af, #038aff) !important;
+    box-shadow: 0 0.04rem 0.15rem rgba(3,138,255,0.35) !important;
+}
+
+.user-name, .welcome-title {
+    color: #ffffff !important;
+    font-family: 'fzltzh' !important;
+}
+
+.user-role {
+    color: #bcd6f5 !important;
+}
+
+/* ---------- 导航标签（原站白色激活态） ---------- */
+.nav-tabs {
+    background: rgba(255,255,255,0.14) !important;
+    border-radius: 0.08rem !important;
+}
+
+.nav-tab {
+    color: rgba(255,255,255,0.82) !important;
+    font-family: 'fzlth' !important;
+}
+
+.nav-tab:hover {
+    background: rgba(255,255,255,0.18) !important;
+    color: #ffffff !important;
+}
+
+.nav-tab.active {
+    background: #ffffff !important;
+    color: #2362af !important;
+    font-weight: 600 !important;
+    box-shadow: 0 0.02rem 0.1rem rgba(0,0,0,0.15) !important;
+}
+
+/* ---------- 内容卡片（原站白色圆角卡片） ---------- */
+.content, .main-content, .personal-info, .department-info, .attendance-section,
+.leave-section, .mission-section {
+    background: #ffffff !important;
+    border: none !important;
+    border-radius: 0.2rem !important;
+    box-shadow: 0 0 0.3rem rgba(175,193,214,0.3) !important;
+    color: #494949 !important;
+}
+
+.section-title {
+    color: #403f3f !important;
+    font-family: 'fzltzh' !important;
+    border-bottom: 0.02rem solid #c5daec !important;
+}
+
+/* ---------- 统计卡片 / 功能卡片（原站浅色卡片） ---------- */
+.stat-card, .feature-card, .stats-cards .stat-card {
+    background: #fafdff !important;
+    border: 1px solid #e3eef8 !important;
+    border-radius: 0.15rem !important;
+    box-shadow: 0 0 0.2rem rgba(175,193,214,0.2) !important;
+    color: #494949 !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.stat-card:hover, .feature-card:hover {
+    transform: translateY(-0.1rem) !important;
+    box-shadow: 0 0.2rem 0.3rem rgba(175,193,214,0.8) !important;
+    border-color: #85b1e7 !important;
+}
+
+.stat-value, .stat-item .stat-value {
+    color: #2362af !important;
+    font-family: 'fzltzh' !important;
+}
+
+.stat-label, .feature-title {
+    color: #403f3f !important;
+    font-family: 'fzltzh' !important;
+}
+
+.feature-desc, .detail-label, .info-label {
+    color: #6d7888 !important;
+}
+
+.feature-icon {
+    background: #eff8ff !important;
+    border-radius: 0.1rem !important;
+}
+
+/* ---------- 表格（原站浅蓝表头） ---------- */
+.data-table, .attendance-table, .leave-table, table.data-table {
+    color: #494949 !important;
+    font-family: 'fzlth' !important;
+}
+
+.data-table thead th, .attendance-table thead th, .leave-table thead th,
+.data-table th, .attendance-table th, .leave-table th {
+    background: #eff8ff !important;
+    color: #2362af !important;
+    font-family: 'fzltzh' !important;
+    border-bottom: 1px solid #d8e9f7 !important;
+}
+
+.data-table tbody tr, .attendance-table tbody tr, .leave-table tbody tr {
+    background: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even), .attendance-table tbody tr:nth-child(even),
+.leave-table tbody tr:nth-child(even) {
+    background: #fafdff !important;
+}
+
+.data-table tbody tr:hover, .attendance-table tbody tr:hover, .leave-table tbody tr:hover {
+    background: #eff8ff !important;
+}
+
+.data-table td, .attendance-table td, .leave-table td {
+    border-bottom: 1px solid #e9eef4 !important;
+}
+
+/* ---------- 输入框 / 表单（原站灰底圆角） ---------- */
+.form-control, input[type=text], input[type=password], input[type=email],
+input[type=number], input[type=date], select, textarea {
+    background: #efefef !important;
+    border: 0.02rem solid #d0d0d0 !important;
+    border-radius: 0.1rem !important;
+    color: #555555 !important;
+    font-family: 'fzlth' !important;
+}
+
+.form-control:focus, input:focus, select:focus, textarea:focus {
+    border-color: #038aff !important;
+    box-shadow: 0 0 0.1rem rgba(3,138,255,0.2) !important;
+    outline: none;
+    background: #ffffff !important;
+}
+
+.form-label {
+    color: #494949 !important;
+    font-family: 'fzltzh' !important;
+}
+
+.search-box, .query-results {
+    background: #fafdff !important;
+    border: 1px solid #e3e8ef !important;
+    border-radius: 0.1rem !important;
+}
+
+/* ---------- 按钮（原站深蓝渐变主按钮 btn3.png 风格） ---------- */
+.btn {
+    border: 0.02rem solid #c9d5e3 !important;
+    border-radius: 0.08rem !important;
+    color: #5894de !important;
+    background: #ffffff !important;
+    font-family: 'fzlth' !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.btn:hover {
+    border-color: #2362af !important;
+    color: #2362af !important;
+    box-shadow: 0 0.02rem 0.1rem #afc1d6 !important;
+}
+
+.btn-primary, .submit-btn, .complete-btn {
+    background: url('havvk/btn3.png') no-repeat 50% 0 !important;
+    background-size: 100% 100% !important;
+    border: none !important;
+    color: #ffffff !important;
+    font-family: 'fzltzh' !important;
+    text-transform: uppercase !important;
+}
+
+.btn-primary:hover, .submit-btn:hover, .complete-btn:hover {
+    filter: brightness(1.1) drop-shadow(0 0.02rem 0.1rem #c6c7cb) !important;
+    transform: translateY(-0.01rem) !important;
+    color: #ffffff !important;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #20c75e, #37d97a) !important;
+    border: none !important;
+    color: #ffffff !important;
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, #dd7d0b, #f09a3a) !important;
+    border: none !important;
+    color: #ffffff !important;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #e61a29, #f04a56) !important;
+    border: none !important;
+    color: #ffffff !important;
+}
+
+.btn-outline {
+    background: transparent !important;
+    border: 0.02rem solid #c9d5e3 !important;
+    color: #5894de !important;
+}
+
+/* ---------- 徽章 / 状态标签（原站 col1/col2/col3 色系） ---------- */
+.badge, .status-tag {
+    border-radius: 0.08rem !important;
+    font-family: 'fzlth' !important;
+}
+
+.badge-primary, .status-completed {
+    background: #eff8ff !important;
+    color: #2362af !important;
+}
+
+.badge-success {
+    background: #e8f9ef !important;
+    color: #20c75e !important;
+}
+
+.badge-warning, .status-unfinished {
+    background: #fdf3e7 !important;
+    color: #dd7d0b !important;
+}
+
+.badge-danger {
+    background: #fdecec !important;
+    color: #e61a29 !important;
+}
+
+/* ---------- 员工卡片 / 任务卡片 ---------- */
+.employee-card, .mission-card {
+    background: #ffffff !important;
+    border: 1px solid #e3e8ef !important;
+    border-radius: 0.15rem !important;
+    box-shadow: 0 0 0.2rem rgba(175,193,214,0.2) !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.employee-card:hover, .mission-card:hover {
+    transform: translateY(-0.1rem) !important;
+    box-shadow: 0 0.2rem 0.3rem rgba(175,193,214,0.8) !important;
+}
+
+.employee-name, .mission-content {
+    color: #403f3f !important;
+    font-family: 'fzltzh' !important;
+}
+
+.employee-position {
+    color: #2362af !important;
+}
+
+.detail-item, .info-item {
+    background: #fafdff !important;
+    border: 1px solid #e3e8ef !important;
+    border-radius: 0.08rem !important;
+}
+
+.detail-value, .info-value {
+    color: #403f3f !important;
+}
+
+/* ---------- 消息提示（原站浅色提示条） ---------- */
+.error-message {
+    background: #fed7d7 !important;
+    color: #e61a29 !important;
+    border: 1px solid #f5b5b5 !important;
+    border-radius: 0.08rem !important;
+}
+
+.success-message, .success-msg {
+    background: #c6f6d5 !important;
+    color: #20c75e !important;
+    border: 1px solid #a5eebd !important;
+    border-radius: 0.08rem !important;
+}
+
+/* ---------- 模态框（原站白底弹窗） ---------- */
+.modal-content {
+    background: #ffffff !important;
+    border: none !important;
+    border-radius: 0.2rem !important;
+    box-shadow: 0 0 0.5rem rgba(133,150,170,0.5) !important;
+    color: #494949 !important;
+}
+
+.modal-header {
+    background: #eff8ff !important;
+    border-bottom: 0.02rem solid #d8e9f7 !important;
+    color: #2362af !important;
+    font-family: 'fzltzh' !important;
+}
+
+.close {
+    color: #9fb0cb !important;
+}
+
+.close:hover {
+    color: #2362af !important;
+}
+
+/* ---------- 登录页（原站白底登录框） ---------- */
+.login-box, .login-container .login-box {
+    background: #ffffff !important;
+    border: none !important;
+    border-radius: 0.2rem !important;
+    box-shadow: 0 0 0.5rem rgba(133,150,170,0.5) !important;
+}
+
+.login-title, .login-box .login-title {
+    color: #403f3f !important;
+    font-family: 'fzltzh' !important;
+    border-bottom: 0.02rem solid #f0f3f5 !important;
+}
+
+.login-box .form-label {
+    color: #494949 !important;
+}
+
+.login-footer {
+    color: #9fb0cb !important;
+}
+
+/* ---------- 分页 ---------- */
+.page-item, .pagination .page-item a {
+    background: #ffffff !important;
+    color: #5894de !important;
+    border: 1px solid #c9d5e3 !important;
+}
+
+.page-item.active a {
+    background: #2362af !important;
+    color: #ffffff !important;
+    border-color: #2362af !important;
+}
+
+/* ---------- 链接 ---------- */
+a {
+    color: #2362af !important;
+}
+
+a:hover {
+    color: #038aff !important;
+}
+
+/* ---------- 页脚 ---------- */
+.footer {
+    color: #9fb0cb !important;
+}
+
+/* ---------- 其他原站细节 ---------- */
+.results-header, .results-meta {
+    color: #6d7888 !important;
+}
+
+.no-results {
+    color: #9fb0cb !important;
+}
+
+.quick-actions .action-btn {
+    background: #fafdff !important;
+    border: 1px solid #e3e8ef !important;
+    border-radius: 0.1rem !important;
+    color: #2362af !important;
+}
+
+.quick-actions .action-btn:hover {
+    background: #eff8ff !important;
+    border-color: #85b1e7 !important;
+}
+
+.recent-activity .activity-item {
+    border-bottom: 1px solid #f0f3f5 !important;
+}
+
+/* ---------- 打印排除 ---------- */
+@media print {
+    body { background: #ffffff !important; }
+}

@@ -1,0 +1,9 @@
+# 临时文件
+tmp_*.png
+check_img.png
+*.log
+.DS_Store
+Thumbs.db
+
+# 环境
+node_modules/
